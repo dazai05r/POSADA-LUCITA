@@ -3,109 +3,138 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #2E2E38;
-    color: #FFF;
+    background-color: #F4F4F4; /* Fondo claro */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.container {
+  }
+  
+  /* Contenedor principal */
+  .container {
     width: 90%;
-    max-width: 800px; /* Aumentado para los dos contenedores horizontales */
-    background: #3A3A46;
+    max-width: 900px;
+    background: #ffffff;
     border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    display: flex; /* Flexbox activado para alinear horizontalmente */
-    height: 70vh; /* Cambiado a 70vh para hacer el contenedor más alto */
-    flex-direction: column; /* Para que las secciones se acomoden de arriba a abajo */
-    justify-content: center; /* Centrar el contenido verticalmente */
-    align-items: center; /* Centrar el contenido horizontalmente */
-}
-
- /* Logo Section */
-.logo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Logo */
+  .logo {
     text-align: center;
-    padding: 20px 0;
-    background: #1E1E28;
-    width: 100%;
-}
-
-.logo img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-}
-
-.logo h1 {
-    font-size: 1.5em;
-    margin: 5px 0;
-}
-
-.logo p {
-    font-size: 0.9em;
-    margin: 0;
-    color: #A9A9B0;
-}
-
-/* Login Sections */
-.login-section {
     padding: 20px;
-    text-align: center;
-    width: 50%; /* Cada sección ocupará el 50% del contenedor */
-}
-
-.login-section h2 {
-    margin-bottom: 15px;
-    font-size: 1.2em;
-    color: #FFF;
-}
-
-.login-section input {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.login-section button {
+    background: #3b82f6; /* Azul profesional */
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #0056b3;
+  }
+  
+  /* Sección principal */
+  .main-section {
+    display: flex;
+    flex: 1;
+    position: relative;
+  }
+  
+  /* Línea divisoria */
+  .main-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    width: 2px;
+    background: #d4d4d4; /* Línea gris */
+    transform: translateX(-50%);
+  }
+  
+  /* Sección Cliente (Ahora a la izquierda) */
+  .client-section {
     width: 50%;
-    padding: 10px;
-    background: #58C472;
+    padding: 30px;
+    background: #f4f9fc; /* Fondo azul claro */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .client-section h2 {
+    font-size: 1.5em;
+    color: #3b82f6; /* Azul */
+    margin-bottom: 15px;
+  }
+  
+  .client-section button {
+    background: #3b82f6;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
-}
-
-.login-section button:hover {
-    background: #45A961;
-}
-
-/* Styling for user and client sections */
-.user-section {
-    background: #32323D;
-}
-
-.client-section {
-    background: #292933;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        width: 100%;
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    transition: background 0.3s ease;
+  }
+  
+  .client-section button:hover {
+    background: #0056b3; /* Azul oscuro */
+  }
+  
+  /* Sección Usuario (Ahora a la derecha) */
+  .user-section {
+    width: 50%;
+    padding: 30px;
+    background: #ffffff; /* Fondo blanco */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .user-section h2 {
+    font-size: 1.5em;
+    color: #3b82f6; /* Gris oscuro */
+    margin-bottom: 15px;
+  }
+  
+  .user-section button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .user-section button:hover {
+    background: #0056b3; /* Azul oscuro */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 200px) {
+    .main-section {
+      flex-direction: column;
     }
-
-    .login-section {
-        width: 100%; /* Las secciones ocupan todo el ancho */
+  
+    .main-section::before {
+      display: none;
     }
-}
+  
+    .user-section,
+    .client-section {
+      width: 100%;
+      border-bottom: 2px solid #d4d4d4;
+    }
+  
+    .client-section {
+      border-bottom: none;
+    }
+  }
+  
