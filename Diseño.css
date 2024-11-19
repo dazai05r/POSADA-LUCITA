@@ -1,0 +1,111 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2E2E38;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px; /* Aumentado para los dos contenedores horizontales */
+    background: #3A3A46;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex; /* Flexbox activado para alinear horizontalmente */
+    height: 70vh; /* Cambiado a 70vh para hacer el contenedor más alto */
+    flex-direction: column; /* Para que las secciones se acomoden de arriba a abajo */
+    justify-content: center; /* Centrar el contenido verticalmente */
+    align-items: center; /* Centrar el contenido horizontalmente */
+}
+
+ /* Logo Section */
+.logo {
+    text-align: center;
+    padding: 20px 0;
+    background: #1E1E28;
+    width: 100%;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
+.logo p {
+    font-size: 0.9em;
+    margin: 0;
+    color: #A9A9B0;
+}
+
+/* Login Sections */
+.login-section {
+    padding: 20px;
+    text-align: center;
+    width: 50%; /* Cada sección ocupará el 50% del contenedor */
+}
+
+.login-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+.login-section input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-section button {
+    width: 50%;
+    padding: 10px;
+    background: #58C472;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background: #45A961;
+}
+
+/* Styling for user and client sections */
+.user-section {
+    background: #32323D;
+}
+
+.client-section {
+    background: #292933;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .login-section {
+        width: 100%; /* Las secciones ocupan todo el ancho */
+    }
+}
