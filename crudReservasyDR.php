@@ -1,12 +1,11 @@
 <?php
 require 'conexion.php'; // Conexión a la base de datos
 
-
-// Funciones para crear, ver (mostrar), actualizar y eliminar usuarios.
-function crearUsuario($idUsuarios, $nombreUsuarios, $clave, $correo, $celular, $idRol) {
+// Funciones para crear, ver (mostrar), actualizar y eliminar reservas.
+function crearReservas($usuario, $clave, $correo, $celular, $idRol) {
     global $conexion;
 
-    $q = "INSERT INTO usuarios (id_usuarios, nombre_usuarios, password_usuario, email, telefono, id_roles) VALUES ('$idUsuarios', '$nombreUsuarios', '$clave', '$correo', 'celular', 'idRol')";
+    $q = "INSERT INTO usuarios (nombre_usuarios, password_usuario, email, telefono, id_roles) VALUES ('$usuario', '$clave', '$correo', 'celular', 'idRol')";
     $resultado = mysqli_query($conexion, $q);
 
     if ($resultado) {
@@ -16,7 +15,21 @@ function crearUsuario($idUsuarios, $nombreUsuarios, $clave, $correo, $celular, $
     }
 }
 
-function obtenerUsuario($idUsuarios) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function obtenerReservas($idUsuarios) {
     global $conexion;
 
     $q = "SELECT * FROM usuarios WHERE id_usuarios = '$idUsuarios'";
@@ -29,10 +42,10 @@ function obtenerUsuario($idUsuarios) {
     }
 }
 
-function actualizarUsuario($idUsuario, $nombreUsuarios, $clave, $correo, $celular, $idRol) {
+function actualizarReservas($idUsuario, $nombre_usuarios, $clave, $correo, $celular, $idRol) {
     global $conexion;
 
-    $q = "UPDATE usuarios SET nombre_usuarios = '$nombreUsuarios', password_usuario = '$clave', email = '$correo', telefono = '$celular', id_roles = 'idRol' WHERE id_usuarios = '$idUsuario'";
+    $q = "UPDATE usuarios SET usuario = '$nuevo_usuario', password = '$nueva_clave', correo = '$nuevo_correo' WHERE usuario = '$usuario'";
     $resultado = mysqli_query($conexion, $q);
 
     if ($resultado) {
@@ -42,7 +55,7 @@ function actualizarUsuario($idUsuario, $nombreUsuarios, $clave, $correo, $celula
     }
 }
 
-function eliminarUsuario($idUsuario) {
+function eliminarReservas($idUsuario) {
     global $conexion;
 
     $q = "DELETE FROM usuarios WHERE id_usuarios = '$idUsuario'";

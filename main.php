@@ -11,3 +11,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     iniciarSesion($usuario, $clave);
 }
 ?>
+
+<!-- CRUD de usuarios -->

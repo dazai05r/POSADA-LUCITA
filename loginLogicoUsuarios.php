@@ -13,7 +13,7 @@ function iniciarSesion($usuario, $clave) {
         session_start(); // Inicia la sesión
         $_SESSION['logueado'] = $usuario; // Guarda el usuario en la sesión
         echo('olaola');
-        header("Location: administracion.php"); // Redirige al panel principal
+        header("Location: principal.php"); // Redirige al panel principal
     } else {
         // Redirige de vuelta al inicio
         header("Location: loginUsuarios.php");
