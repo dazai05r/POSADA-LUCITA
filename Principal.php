@@ -1,3 +1,7 @@
+<?php
+require 'loginLogicoUsuarios.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,11 +81,12 @@
         <div class="profile_details">
           <img src="IMAGEN/images (3).png" alt="profile image">
           <div class="profile_content">
-            <div class="name">Anna Jhon</div>
+            <div class="name"><?php echo "_".$_SESSION["logueado"]; ?></div>
             <div class="designation">Admin</div>
           </div>
         </div>
-        <i class="bx bx-log-out" id="log_out"></i>
+        <!-- Boton de cerrar sesion -->
+        <button class="bx bx-log-out" id="log_out" ></button>
       </li>
     </ul>
   </div>

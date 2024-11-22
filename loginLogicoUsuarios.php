@@ -20,3 +20,15 @@ function iniciarSesion($usuario, $clave) {
     }
 }
 ?>
+
+<?php
+require 'conexion.php';
+
+function logueado(){
+session_start();
+if(isset($_SESSION["logueado"])){}
+
+else{  header("location: principal.php");}
+
+}
+?>
