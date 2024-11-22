@@ -115,13 +115,7 @@ body{
   pointer-events: none;
 }
 
-.sidebar li:hover .tooltip {
-  opacity: 1; /* Hace que el tooltip sea visible al pasar el ratón */
-  pointer-events: auto; /* Habilita interacción con el tooltip */
-  top: 50%; /* Centra verticalmente */
-  transform: translateY(-50%); /* Alinea al centro */
-  transition: all 0.4s ease; /* Animación suave */
-}
+
 .sidebar.open li .tooltip{
   display: none;
 }

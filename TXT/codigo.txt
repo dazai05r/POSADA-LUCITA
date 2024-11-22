@@ -1,3 +1,4 @@
+BARRA DE BUSQUEDA OPCION 1
 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown
@@ -11,3 +12,12 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
+
+BARRA DE BUSQUEDA OPCION 2
+<li>
+  <i class="bx bx-search"></i>
+  <input type="text" placeholder="Search...">
+  <span class="tooltip">Search</span>
+</li>
+
+<box-icon name='clipboard'></box-icon>
