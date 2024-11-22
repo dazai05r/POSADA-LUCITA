@@ -35,23 +35,3 @@ window.onload = function () {
     });
   };
   
-  /* Establecemos las variables para los menús y los enlaces */
-const navItems = document.querySelectorAll('.nav__item'); // Todos los ítems del menú
-const dropdowns = document.querySelectorAll('.dropdown'); // Todos los submenús
-
-/* Añadimos un evento de clic para cada item de menú */
-navItems.forEach(item => {
-  item.addEventListener('click', (e) => {
-    const dropdown = item.querySelector('.dropdown'); // Obtener el submenú correspondiente
-
-    // Si el submenú ya está visible, lo ocultamos
-    if (dropdown.classList.contains('show-dropdown')) {
-      dropdown.classList.remove('show-dropdown');
-    } else {
-      // Primero cerramos todos los submenús abiertos
-      dropdowns.forEach(dropdown => dropdown.classList.remove('show-dropdown'));
-      // Luego mostramos el submenú del ítem seleccionado
-      dropdown.classList.add('show-dropdown');
-    }
-  });
-});

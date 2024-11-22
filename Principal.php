@@ -23,10 +23,6 @@ require 'loginLogicoUsuarios.php';
         <i class="bx bx-calendar"></i> <!-- Icono para Reservaciones -->
         <span class="link_name">Reservaciones</span>
     </a>
-    <ul class="dropdown" id="reservaciones-dropdown">
-        <li><a href="#">Subopción 1</a></li>
-        <li><a href="#">Subopción 2</a></li>
-    </ul>
 </li>
 
 <li class="nav__item">
@@ -34,10 +30,6 @@ require 'loginLogicoUsuarios.php';
         <i class="bx bx-file"></i> <!-- Icono para Registros -->
         <span class="link_name">Registros</span>
     </a>
-    <ul class="dropdown" id="registros-dropdown">
-        <li><a href="#">Subopción 1</a></li>
-        <li><a href="#">Subopción 2</a></li>
-    </ul>
 </li>
 
 <li class="nav__item">
@@ -45,10 +37,6 @@ require 'loginLogicoUsuarios.php';
         <i class="bx bx-user"></i> <!-- Icono para Usuarios -->
         <span class="link_name">Usuarios</span>
     </a>
-    <ul class="dropdown" id="usuarios-dropdown">
-        <li><a href="#">Subopción 1</a></li>
-        <li><a href="#">Subopción 2</a></li>
-    </ul>
 </li>
 
               <!-- Close button -->
@@ -86,7 +74,9 @@ require 'loginLogicoUsuarios.php';
           </div>
         </div>
         <!-- Boton de cerrar sesion -->
-        <button class="bx bx-log-out" id="log_out" ></button>
+        <button class="log_out" id="log_out">
+          <i class="bx bx-log-out"></i>
+        </button>
       </li>
     </ul>
   </div>

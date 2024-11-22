@@ -340,6 +340,29 @@ body{
   }
 }
 
+.log_out {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.log_out i {
+  color: #ffffff; /* El color blanco del ícono */
+  font-size: 20px; /* Tamaño del ícono */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.log_out:hover i {
+  transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+  color: #cccccc; /* Color más claro en el hover */
+}
+
+
 
 /*=============== MENU HORIZONTAL ===============*/
 :root {
@@ -532,49 +555,5 @@ img {
   .container {
     margin-inline: auto;
   }
-}
-
-/* Estilo inicial del submenú (fuera de la barra lateral) */
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #f5f5f5; /* Color de fondo del submenú */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el efecto flotante */
-  padding-left: 10px;
-  list-style: none;
-  transition: all 0.3s ease-in-out;
-  margin-top: 5px; /* Espaciado entre el enlace y el submenú */
-  width: 200px; /* Ancho del submenú */
-  z-index: 999; /* Para asegurarnos de que quede encima de otros elementos */
-  opacity: 0;
-  visibility: hidden;
-}
-
-/* Cuando el submenú está visible */
-.show-dropdown {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Ajuste de los elementos del submenú */
-.dropdown li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.dropdown li:last-child {
-  border-bottom: none;
-}
-
-.dropdown li a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-  padding: 5px 0;
-}
-
-.dropdown li a:hover {
-  background-color: #ddd;
 }
 
