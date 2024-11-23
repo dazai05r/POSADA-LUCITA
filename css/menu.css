@@ -557,3 +557,110 @@ img {
   }
 }
 
+.table-container {
+  margin: 2rem 0 8rem 8rem; /* Top, Right, Bottom, Left */
+  padding: 1rem;
+  max-width: 700px;
+  background-color: var(--color-body); /* Fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 15px 15px;
+  text-align: left;
+}
+
+.styled-table thead th {
+  background-color: var(--color-default); /* Color principal */
+  color: var(--color-white);
+  font-weight: var(--font-medium);
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid var(--color-light);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: var(--color-container); /* Fondo alternativo */
+}
+
+.styled-table tbody tr:hover {
+  background-color: var(--color-light); /* Resalta al pasar */
+  color: var(--color-default);
+}
+
+.styled-table tbody td {
+  color: var(--text-color);
+}
+
+.styled-table tbody td:first-child {
+  font-weight: var(--font-medium); /* Resaltar primera columna */
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    padding: 0.5rem;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 8px 10px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Contenedor del buscador */
+.search-container {
+  margin: 20px; /* Espaciado */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search-container input {
+  width: 300px; /* Tamaño del input */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input::placeholder {
+  color: #999;
+}
+
+/* Estilo para el botón */
+.search-button {
+  background-color: #007bff; /* Color de fondo azul */
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.search-button i {
+  color: white; /* Color del icono */
+  font-size: 1.2rem;
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Color al pasar el mouse */
+}
+
+.search-button:focus {
+  outline: none;
+}

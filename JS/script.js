@@ -34,4 +34,15 @@ window.onload = function () {
       }
     });
   };
+
+  document.getElementById("search-bar").addEventListener("keyup", function () {
+    const filter = this.value.toLowerCase();
+    const rows = document.querySelectorAll(".styled-table tbody tr");
+  
+    rows.forEach((row) => {
+      const cells = Array.from(row.getElementsByTagName("td"));
+      const match = cells.some((cell) => cell.textContent.toLowerCase().includes(filter));
+      row.style.display = match ? "" : "none"; // Muestra solo las filas que coinciden
+    });
+  });
   
