@@ -725,7 +725,7 @@ img {
 
 /* Contenedor del buscador */
 .search-container {
-  margin: 8rem 8rem 1rem 8rem; /* Espaciado */
+  margin: 8rem 8rem 1rem 9rem; /* Espaciado */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -795,6 +795,16 @@ img {
 
 /* Contenedor del formulario al costado de la tabla */
 .form-container {
+  margin-left: 150px; /* Mantener el margen izquierdo */
+  margin-top: -70px; /* Mayor valor negativo para subir más el formulario */
+  width: 30%;
+  float: left;
+  background-color: var(--color-body);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-container-reservas {
   margin-left: 150px; /* Mantener el margen izquierdo */
   margin-top: -70px; /* Mayor valor negativo para subir más el formulario */
   width: 30%;
@@ -906,5 +916,155 @@ img {
 /* Efecto hover para el botón */
 .btn-submit:hover {
   background-color: #0056b3;
+}
+
+
+
+/* Fondo del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  overflow: auto; /* Habilita desplazamiento si el contenido es grande */
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: #fff;
+  margin: 2% auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Estilo de campos */
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Botones del modal */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#btn-close,
+.btn-save {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btn-close {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+.btn-save {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+
+/* Hover para botones */
+#btn-close:hover {
+  background-color: #d32f2f;
+}
+
+.btn-save:hover {
+  background-color: #388e3c;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .modal-content {
+      width: 90%;
+      margin-top: 20%;
+  }
+}
+.modal-content h3 {
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 20px; /* Tamaño de letra más grande para mayor impacto */
+  font-weight: 600; /* Peso de fuente ligeramente más ligero */
+  color: #fff; /* Color blanco para el texto */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  
+  /* Fondo con un gradiente sutil */
+  background: #0056b3;
+  padding: 5px 5px; /* Espaciado alrededor del texto */
+  
+  /* Bordes redondeados */
+  border-radius: 15px;
+  
+  /* Sombra más marcada para profundidad */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  
+  /* Añadir borde inferior sutil */
+  border-bottom: 4px solid #ffffff;
+  
+  text-transform: uppercase; /* Poner el texto en mayúsculas */
+}
+
+.campo-reserva {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.campo-reserva label {
+  font-size: 16px;
+  margin-right: 80px;  /* Aumenté el margen para alejar más el label */
+  font-weight: bold;
+}
+
+.campo-reserva input {
+  width: 50px;  /* Tamaño ajustado a la entrada numérica */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.campo-disponible {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.campo-disponible label {
+  font-size: 16px;
+  margin-right: 128px;  /* Separación entre label y input */
+  font-weight: bold;
+}
+
+.campo-disponible input {
+  width: 50px;  /* Tamaño ajustado a la entrada numérica */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
