@@ -1121,3 +1121,49 @@ table td {
 .justify-content-md-end {
   justify-content: flex-end;
 }
+.formulario-container {
+  margin-top: -93px; /* Ajusta este valor según lo necesites */
+}
+
+/* Reducir el espacio entre las entradas de datos */
+.form-label {
+  margin-bottom: 4px; /* Menor espacio entre la etiqueta y el campo */
+}
+
+/* Reducir el espacio entre los campos de entrada */
+.form-control,
+.form-select {
+  margin-bottom: 12px; /* Menor margen entre los campos */
+  padding: 8px; /* Menor padding dentro de los campos */
+}
+
+
+/* Ajustar el padding de los botones */
+form button {
+  padding: 10px 15px; /* Menor padding en el botón */
+}
+
+
+/* Eliminar márgenes de las secciones del formulario */
+section {
+  margin: 0; /* Elimina el margen de las secciones */
+  padding: 15px; /* Mantiene el padding dentro de las secciones */
+}
+
+/* Reducir el margen dentro de los formularios */
+form .mb-3 {
+  margin-bottom: 5px; /* Reduce el margen entre las entradas */
+}
+
+/* Sección del formulario */
+.col-4 {
+  margin-left: auto;  /* Mueve el formulario hacia la derecha */
+  margin-right: 0;    /* Elimina margen derecho */
+  width: 30%;         /* Reduce el tamaño del contenedor del formulario al 30% */
+}
+
+/* Ajustar el padding y márgenes si es necesario */
+section {
+  margin: 0;
+  padding: 15px;
+}
