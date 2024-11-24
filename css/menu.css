@@ -664,64 +664,6 @@ img {
   }
 }
 
-.table-container {
-  margin: 2rem 0 8rem 8rem; /* Top, Right, Bottom, Left */
-  padding: 1rem;
-  max-width: 700px;
-  background-color: var(--color-body); /* Fondo claro */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-.styled-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.styled-table th,
-.styled-table td {
-  padding: 15px 15px;
-  text-align: left;
-}
-
-.styled-table thead th {
-  background-color: var(--color-default); /* Color principal */
-  color: var(--color-white);
-  font-weight: var(--font-medium);
-}
-
-.styled-table tbody tr {
-  border-bottom: 1px solid var(--color-light);
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: var(--color-container); /* Fondo alternativo */
-}
-
-.styled-table tbody tr:hover {
-  background-color: var(--color-light); /* Resalta al pasar */
-  color: var(--color-default);
-}
-
-.styled-table tbody td {
-  color: var(--text-color);
-}
-
-.styled-table tbody td:first-child {
-  font-weight: var(--font-medium); /* Resaltar primera columna */
-}
-
-@media (max-width: 768px) {
-  .table-container {
-    padding: 0.5rem;
-  }
-
-  .styled-table th,
-  .styled-table td {
-    padding: 8px 10px;
-    font-size: 0.875rem;
-  }
-}
 
 /* Contenedor del buscador */
 .search-container {
@@ -766,16 +708,7 @@ img {
   outline: none;
 }
 
-/* Contenedor de la tabla */
-.table-container {
-  margin: 2rem 0 2rem 8rem; /* Reducido el margen inferior de la tabla */
-  padding: 1rem;
-  max-width: 700px;
-  background-color: var(--color-body);
-  border-radius: 8px;
-  width: 65%;
-  float: left;
-}
+
 
 /* Estilos de los botones debajo de la tabla */
 
@@ -964,180 +897,227 @@ img {
 .btn-submit:hover {
   background-color: #0056b3;
 }
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; /* Invertir orden de los elementos */
+  margin: 10px auto;
+  max-width: 1300px; /* Contenedor más amplio */
+}
+
+/* Section Styles */
+section {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin: 15px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.col-4 {
+  flex: 0 0 40%; /* Ocupar el 40% del contenedor */
+  margin-left: 20px; /* Desplaza el contenedor 20px hacia la derecha */
+}
+
+.col-8 {
+  flex: 1 1 55%;
+  margin-right: 15px;
+}
 
 
 
-/* Fondo del modal */
+.alert {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.alert-dark {
+  background-color: #007bff;
+  color: white;
+}
+
+.alert-warning {
+  background-color: white;  /* Fondo blanco */
+  color: black;             /* Texto en negro para buen contraste */
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Asegura que el formulario ocupe todo el ancho de su contenedor */
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block; /* Asegura que el label esté en una nueva línea */
+}
+
+form input,
+form select {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Ocupa todo el ancho del formulario */
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho total */
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Botón también ocupa todo el ancho del formulario */
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden; /* Esquinas redondeadas */
+  background-color: #ffffff;
+}
+
+table thead {
+  background-color: #007bff; /* Encabezado azul */
+  color: white;
+}
+
+table th,
+table td {
+  padding: 5px;
+  text-align: left;
+}
+
+table th {
+  font-size: 1rem;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #ddd; /* Separadores ligeros */
+}
+
+table tbody tr:hover {
+  background-color: #f0f8ff; /* Azul claro al pasar el cursor */
+}
+
+table td {
+  font-size: 0.9rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Modal Styles */
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  overflow: auto; /* Habilita desplazamiento si el contenido es grande */
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Contenido del modal */
-.modal-content {
-  background-color: #fff;
-  margin: 2% auto;
+.modal-dialog {
+  background: white;
+  margin: 10% auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 50%;
-  max-width: 500px;
-  text-align: left;
+  border-radius: 8px;
 }
 
-/* Estilo de campos */
-.modal-content label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-  color: #333;
-}
-
-.modal-content input,
-.modal-content select {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #333;
-}
-
-/* Botones del modal */
+.modal-header,
 .modal-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-#btn-close,
-.btn-save {
-  padding: 10px 20px;
-  font-size: 16px;
+.modal-header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.modal-header .btn-close {
+  background: transparent;
   border: none;
-  border-radius: 5px;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
-#btn-close {
-  background-color: #f44336; /* Rojo */
-  color: white;
+.modal-body {
+  margin: 20px 0;
 }
 
-.btn-save {
-  background-color: #4caf50; /* Verde */
-  color: white;
+.modal-footer button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
 }
 
-/* Hover para botones */
-#btn-close:hover {
-  background-color: #d32f2f;
+/* Utility Classes */
+.text-center {
+  text-align: center;
 }
 
-.btn-save:hover {
-  background-color: #388e3c;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .modal-content {
-      width: 90%;
-      margin-top: 20%;
-  }
-}
-.modal-content h3 {
-  text-align: center; /* Centra el texto horizontalmente */
-  font-size: 20px; /* Tamaño de letra más grande para mayor impacto */
-  font-weight: 600; /* Peso de fuente ligeramente más ligero */
-  color: #fff; /* Color blanco para el texto */
-  margin-bottom: 20px; /* Espacio debajo del título */
-  
-  /* Fondo con un gradiente sutil */
-  background: #0056b3;
-  padding: 5px 5px; /* Espaciado alrededor del texto */
-  
-  /* Bordes redondeados */
-  border-radius: 15px;
-  
-  /* Sombra más marcada para profundidad */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  
-  /* Añadir borde inferior sutil */
-  border-bottom: 4px solid #ffffff;
-  
-  text-transform: uppercase; /* Poner el texto en mayúsculas */
-}
-
-.campo-reserva {
+.d-md-flex {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
 }
 
-.campo-reserva label {
-  font-size: 16px;
-  margin-right: 80px;  /* Aumenté el margen para alejar más el label */
-  font-weight: bold;
+.justify-content-md-end {
+  justify-content: flex-end;
 }
-
-.campo-reserva input {
-  width: 50px;  /* Tamaño ajustado a la entrada numérica */
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.campo-disponible {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.campo-disponible label {
-  font-size: 16px;
-  margin-right: 128px;  /* Separación entre label y input */
-  font-weight: bold;
-}
-
-.campo-disponible input {
-  width: 50px;  /* Tamaño ajustado a la entrada numérica */
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Estilos generales del formulario */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Estilo para la etiqueta de fecha */
-.campo-fecha label {
-  margin-bottom: 10px; /* Aumentamos el espacio entre el label y el input */
-}
-
-/* Estilo para el campo de fecha */
-.campo-fecha input {
-  margin-top: 5px;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Espaciado adicional para bajar el campo de fecha */
-.campo-fecha {
-  margin-top: 20px;
-}
-
