@@ -62,27 +62,4 @@ window.onload = function () {
     }
   });
 
-   // Función para formatear el número de teléfono
-   function formatPhoneNumber(event) {
-    let phoneNumber = event.target.value;
-
-    // Eliminar todo lo que no sea número
-    phoneNumber = phoneNumber.replace(/\D/g, '');
-
-    // Formatear el número de teléfono en el formato 916-186-8767
-    if (phoneNumber.length <= 3) {
-      phoneNumber = phoneNumber.replace(/(\d{3})(\d{0,})/, '$1$2');
-    } else if (phoneNumber.length <= 6) {
-      phoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{0,})/, '$1-$2$3');
-    } else {
-      phoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
-    }
-
-    // Actualizar el valor del input con el número formateado
-    event.target.value = phoneNumber;
-
-    // Evitar que el número se pase de los 10 caracteres
-    if (phoneNumber.length > 12) {
-      event.target.value = phoneNumber.substring(0, 12);
-    }
-  }
+  

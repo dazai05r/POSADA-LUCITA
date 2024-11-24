@@ -908,17 +908,3 @@ img {
   background-color: #0056b3;
 }
 
-/* Estado de error para inputs */
-.form-container input.error {
-  border-color: #ff0000; /* Borde rojo para campos con error */
-  background-color: #ffe6e6; /* Fondo ligeramente rosado */
-}
-
-/* Mensajes de error */
-.error-message {
-  color: #ff0000; /* Texto rojo */
-  font-size: 14px;
-  display: none; /* Ocultar los mensajes de error por defecto */
-  margin-top: -10px; /* Ajustar espacio debajo del input */
-  margin-bottom: 10px;
-}
