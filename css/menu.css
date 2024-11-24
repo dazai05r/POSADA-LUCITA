@@ -363,13 +363,11 @@ body{
 }
 
 
-
 /*=============== MENU HORIZONTAL ===============*/
 :root {
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(230, 75%, 56%);
   --title-color: hsl(230, 75%, 15%);
   --text-color: hsl(230, 12%, 40%);
@@ -378,7 +376,6 @@ body{
   --border-color: hsl(230, 25%, 80%);
 
   /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Syne", sans-serif;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
@@ -444,9 +441,83 @@ img {
   height: auto;
 }
 
+/*=============== MENU HORIZONTAL ===============*/
+/* Menú horizontal */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--first-color);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar li {
+  padding: 0.5rem 1rem;
+}
+
+.navbar a {
+  color: white;
+  font-weight: var(--font-medium);
+}
+
+/* Estilo para pantallas pequeñas */
+@media screen and (max-width: 1023px) {
+  /* Ajuste del menú en pantallas más pequeñas */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    display: none; /* Ocultar el menú de items */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar.active ul {
+    display: flex; /* Mostrar el menú cuando se activa */
+  }
+
+  .navbar li {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
+}
+
+/* Mostrar el icono de hamburguesa solo en pantallas pequeñas */
+.menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1280px;
+  max-width: 1000px;
   margin-inline: 1.5rem;
 }
 
@@ -492,6 +563,42 @@ img {
 
 :is(.nav__logo, .nav__search, .nav__login, .nav__toggle, .nav__link):hover {
   color: var(--first-color);
+}
+
+/*====================== Ajustes adicionales para pantallas más pequeñas =====================*/
+/* Para pantallas móviles y de PC más pequeñas */
+@media screen and (max-width: 768px) {
+  /* Ajustes en el tamaño de la fuente y espaciado */
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    display: none; /* Esconder por defecto */
+    width: 100%;
+  }
+
+  .navbar.active ul {
+    display: block; /* Mostrar cuando se activa */
+  }
+
+  .navbar li {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block; /* Mostrar el ícono de hamburguesa */
+    cursor: pointer;
+  }
+
+  .menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
 }
 
 /* Navigation for mobile devices */
@@ -618,7 +725,7 @@ img {
 
 /* Contenedor del buscador */
 .search-container {
-  margin: 20px; /* Espaciado */
+  margin: 8rem 8rem 1rem 8rem; /* Espaciado */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -628,33 +735,27 @@ img {
   width: 300px; /* Tamaño del input */
   padding: 0.5rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   outline: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-container input::placeholder {
-  color: #999;
+  color: var(--text-color);
 }
 
 /* Estilo para el botón */
 .search-button {
-  background-color: #007bff; /* Color de fondo azul */
-  border: none;
   padding: 0.5rem 1rem;
   margin-left: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff; /* Color de fondo azul */
+  border: none;
   border-radius: 8px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: background-color 0.3s;
-}
-
-.search-button i {
-  color: white; /* Color del icono */
-  font-size: 1.2rem;
 }
 
 .search-button:hover {
@@ -663,4 +764,161 @@ img {
 
 .search-button:focus {
   outline: none;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+  margin: 2rem 0 2rem 8rem; /* Reducido el margen inferior de la tabla */
+  padding: 1rem;
+  max-width: 700px;
+  background-color: var(--color-body);
+  border-radius: 8px;
+  width: 65%;
+  float: left;
+}
+
+/* Estilos de los botones debajo de la tabla */
+
+
+.btn-action {
+  padding: 10px 20px;
+  background-color: var(--color-second);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-action:hover {
+  background-color: var(--color-default);
+}
+
+/* Contenedor del formulario al costado de la tabla */
+.form-container {
+  margin-left: 150px; /* Mantener el margen izquierdo */
+  margin-top: -70px; /* Mayor valor negativo para subir más el formulario */
+  width: 30%;
+  float: left;
+  background-color: var(--color-body);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-container select {
+  border: none; /* Elimina la línea negra */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Ajusta el tamaño del texto */
+  color: #333; /* Color del texto */
+  
+}
+
+.form-container select:focus {
+  outline: none; /* Quita el contorno al enfocar */
+  box-shadow: 0 0 5px #007bff; /* Agrega un efecto de enfoque opcional */
+}
+
+
+
+/* Estilos del formulario */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+}
+
+.form-container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--color-light);
+  border-radius: 5px;
+}
+
+.form-container button {
+  padding: 10px;
+  background-color: var(--color-second);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form-container button:hover {
+  background-color: var(--color-default);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  /* La tabla y el formulario ocupan el 100% del ancho en pantallas pequeñas */
+  .table-container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .form-container {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 20px; /* Añadido margen superior para separarlo más de la tabla */
+  }
+  
+
+}
+
+/* Contenedor de botones juntos */
+.button-container {
+  display: flex;
+  gap: 100px; /* Espacio entre los botones */
+  position: relative;
+  top: 150px; /* Ajusta este valor para moverlos hacia abajo */
+
+}
+
+/* Estilos de los botones */
+.btn-action {
+  padding: 10px 20px;
+  background-color: var(--color-second);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-action:hover {
+  background-color: var(--color-default);
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Ajusta este valor para bajar más el botón */
+}
+
+/* Efecto hover para el botón */
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+/* Estado de error para inputs */
+.form-container input.error {
+  border-color: #ff0000; /* Borde rojo para campos con error */
+  background-color: #ffe6e6; /* Fondo ligeramente rosado */
+}
+
+/* Mensajes de error */
+.error-message {
+  color: #ff0000; /* Texto rojo */
+  font-size: 14px;
+  display: none; /* Ocultar los mensajes de error por defecto */
+  margin-top: -10px; /* Ajustar espacio debajo del input */
+  margin-bottom: 10px;
 }
