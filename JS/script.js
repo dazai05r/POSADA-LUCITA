@@ -45,21 +45,4 @@ window.onload = function () {
       row.style.display = match ? "" : "none"; // Muestra solo las filas que coinciden
     });
   });
-  document.getElementById("myForm").addEventListener("submit", function(event) {
-    const emailInput = document.getElementById("email");
-    const phoneInput = document.getElementById("phone");
-    const emailValue = emailInput.value;
-    const phoneValue = phoneInput.value;
-  
-    // Convertir correo a minúsculas
-    emailInput.value = emailValue.toLowerCase();
-  
-    // Validar número de teléfono (10 dígitos)
-    if (!/^\d{10}$/.test(phoneValue)) {
-      event.preventDefault(); // Evita el envío del formulario
-      alert("El número de teléfono debe contener exactamente 10 dígitos.");
-      phoneInput.focus();
-    }
-  });
 
-  
