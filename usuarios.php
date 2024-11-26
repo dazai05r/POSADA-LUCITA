@@ -13,7 +13,7 @@ include 'CRUDS/crudUsuarios.php';
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Sidenav Light - SB Admin</title>
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/menu.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">

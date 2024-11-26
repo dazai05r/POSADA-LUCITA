@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <div class="signup-container">
@@ -14,7 +14,7 @@
       <img src="IMAGEN/images (3).png" alt="Profile Photo">
       </div>
     </div>
-    <form action="main.php" method="GET">
+    <form action="inicio.php" method="GET">
       <div class="input-group">
         <label for="username">Nombre de Usuario</label>
         <input type="text" id="username" name="usuario" placeholder="Usuario">
