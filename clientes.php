@@ -168,32 +168,35 @@ include 'CRUDS/crudClientes.php';
             </div>
             <div class="modal-body">
               <form id="formularioEdit" action="" method="GET">
-                <div class="mb-1 alert alert-success p-1 bg-info text-white">
+              <div class="mb-2 alert alert-secondary p-1">
                   <label for="nombreCliente" class="form-label">Nombre del cliente:</label>
                   <input value="<?=$datos->nombre_cliente ?>" type="text" name="nombreCliente" class="form-control" id="nombre">
-                </div>
-                <div class="mb-1 alert alert-success bg-info text-white">
-
                   <input type="hidden" name="idCliente" class="form-control" value="<?=$datos->id_cliente ?>">
-
+                  </div>
+                  <div class="mb-1 alert alert-secondary p-1">
                   <label for="primerApellido" class="form-label">Apellido paterno:</label>
                   <input type="text" name="primerApellido" class="form-control" id="telefono" value="<?=$datos->primer_apellido ?>">
-
+                  </div>
+                  <div class="mb-1 alert alert-secondary p-1">
                   <label for="segundoApellido" class="form-label">Apellido materno:</label>
                   <input type="text" name="segundoApellido" class="form-control" id="telefono" value="<?=$datos->segundo_apellido ?>">
-
+                  </div>
+                  <div class="mb-1 alert alert-secondary p-1">
                   <label for="clave" class="form-label p-1">Clave de sesión:</label>
                   <input type="text" name="clave" class="form-control" id="clave" value="<?=$datos->password_clientes ?>">
-
+                  </div>
+                  <div class="mb-1 alert alert-secondary p-1">
                   <label for="claveN" class="form-label p-2">Confirmar clave de sesión:</label>
                   <input type="text" name="claveN" class="form-control" id="claveN" value="<?=$datos->password_clientes ?>">
-
+                  </div>
+                  <div class="mb-1 alert alert-secondary p-1">
                   <label for="correo" class="form-label">Correo electrónico:</label>
                   <input type="text" name="correo" class="form-control" id="correo" value="<?=$datos->email ?>">
-
+                  </div>
+                  <div class="mb-1 alert alert-secondary p-1">
                   <label for="telefono" class="form-label">Teléfono:</label>
                   <input type="text" name="telefono" class="form-control" id="telefono" value="<?=$datos->telefono ?>">
-
+                  </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button name="editar" value="ok" type="submit" class="btn btn-success">Guardar Cambios</button>
@@ -210,37 +213,45 @@ include 'CRUDS/crudClientes.php';
                     </div>
     
                     <!-- Formulario Nuevo Usuario -->
-                    <div class="col-lg-4">
-                        <div class="alert alert-dark text-center p-2">
+                    <div class="col-lg-5">
+                        <div class="alert alert-dark text-center p-1">
                             <h6>Nuevo Cliente</h6>
                         </div>
                         <form method="GET" action="">
-                            <div class="mb-3 alert alert-secondary p-2">
+                           
+                              <div class="mb-2 alert alert-secondary p-1">
                                 <label for="nombreCliente" class="form-label" style="font-size: 0.9rem;">Nombre:</label>
                                 <input type="text" name="nombreCliente" class="form-control form-control-sm" id="nombre" placeholder="Cliente">
-
+                              </div>
+                              <div class="mb-2 alert alert-secondary p-1">
                                 <label for="primerApellido" class="form-label" style="font-size: 0.9rem;">Primer apellido:</label>
                                 <input type="text" name="primerApellido" class="form-control form-control-sm" id="nombre" placeholder="Apellido Paterno">
-
+                              </div>
+                              <div class="mb-2 alert alert-secondary p-1">
                                 <label for="segundoApellido" class="form-label" style="font-size: 0.9rem;">Segundo apellido:</label>
                                 <input type="text" name="segundoApellido" class="form-control form-control-sm" id="nombre" placeholder="Apellido Materno">
-
+                              </div>
+                              <div class="mb-2 alert alert-secondary p-1">
                                 <label for="clave" class="form-label mt-2" style="font-size: 0.9rem;">Contraseña:</label>
                                 <input type="password" name="clave" class="form-control form-control-sm" id="clave" placeholder="Clave">
-    
+                              </div>
+                              <div class="mb-2 alert alert-secondary p-1">
                                 <label for="claveN" class="form-label mt-2" style="font-size: 0.9rem;">Confirmar:</label>
                                 <input type="password" name="claveN" class="form-control form-control-sm" id="claveN" placeholder="Confirmar clave">
-    
-    
+                              </div>
+                              <div class="mb-2 alert alert-secondary p-1">
                                 <label for="correo" class="form-label mt-2" style="font-size: 0.9rem;">Correo:</label>
                                 <input type="email" name="correo" class="form-control form-control-sm" id="correo" placeholder="Correo">
-    
+                              </div>
+                              <div class="mb-2 alert alert-secondary p-1">
                                 <label for="telefono" class="form-label mt-2" style="font-size: 0.9rem;">Teléfono:</label>
                                 <input type="text" name="telefono" class="form-control form-control-sm" id="telefono" placeholder="Teléfono">
-
+                              </div>
+                              
                                 <div class="text-center">
-                                  <button type="submit" class="btn btn-primary btn-sm mt-3 w-100" name="btnregistrar" value="ok">REGISTRAR</button>
+                                  <button type="submit" class="btn btn-primary btn-sm mt-1 w-100" name="btnregistrar" value="ok">REGISTRAR</button>
                                 </div>
+                              
                             </div>
                         </form>
                     </div>

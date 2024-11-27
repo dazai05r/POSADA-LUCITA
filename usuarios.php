@@ -43,19 +43,87 @@ include 'CRUDS/crudUsuarios.php';
             </ul>
         </nav>
         <div id="layoutSidenav">
-          <div id="layoutSidenav_nav">
-              <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
-                  <div class="sb-sidenav-menu">
-                      <div class="nav">
-                          <div class="sb-sidenav-menu-heading">Core</div>
-                          <a class="nav-link" href="index.html">
-                              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                              Dashboard
-                          </a>
-                      </div>
-                  </div>
-              </nav>
-          </div>
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                                INICIO
+                            </a>
+
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseReservas" aria-expanded="false" aria-controls="collapseReservas">
+                                <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
+                                Reservas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseReservas" aria-labelledby="headingReservas" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Reservar</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseClientes" aria-expanded="false" aria-controls="collapseClientes">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                                Registros
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseClientes" aria-labelledby="headingClientes" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="agregar_cliente.html">Registrar</a>
+                                    <a class="nav-link" href="agregar_cliente.html">Ver Registros</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFacturas" aria-expanded="false" aria-controls="collapseFacturas">
+                                <div class="sb-nav-link-icon"><i class="fas fa-credit-card"></i></div>
+                                Usuarios
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseFacturas" aria-labelledby="headingFacturas" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="facturas.html">Agregar</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseReportes" aria-expanded="false" aria-controls="collapseReportes">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Clientes
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseReportes" aria-labelledby="headingReportes" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="reportes.html">Agregar</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUsuarios" aria-expanded="false" aria-controls="collapseUsuarios">
+                                <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
+                                Salidas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseUsuarios" aria-labelledby="headingUsuarios" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="usuarios.html">Mostrar</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseConfiguraciones" aria-expanded="false" aria-controls="collapseConfiguraciones">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
+                                Reportes
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseConfiguraciones" aria-labelledby="headingConfiguraciones" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="configuracion_general.html">Reporte</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
           <div id="layoutSidenav_content">
               <div class="container-fluid p-3">
                   <div class="row">
@@ -99,27 +167,30 @@ include 'CRUDS/crudUsuarios.php';
               <h1 class="modal-title fs-5" id="exampleModalLabel">MODIFICAR</h1>
             </div>
             <div class="modal-body">
+            <div class="mb-1 alert alert-secondary p-1">
               <form id="formularioEdit" action="" method="GET">
-                <div class="mb-1 alert alert-success p-1 bg-info text-white">
+                
                   <label for="nombreUsuarios" class="form-label">Nombre del Usuario:</label>
                   <input value="<?=$datos->nombre_usuarios ?>" type="text" name="nombreUsuarios" class="form-control" id="nombre">
-                </div>
-                <div class="mb-1 alert alert-success bg-info text-white">
-
                   <input type="hidden" name="idUsuarios" class="form-control" value="<?=$datos->id_usuarios ?>">
-
+                </div>
+                <div class="mb-1 alert alert-secondary p-1">
                   <label for="clave" class="form-label p-1">Clave de sesión:</label>
                   <input type="text" name="clave" class="form-control" id="clave" value="<?=$datos->password_usuario ?>">
-
+                </div>
+                <div class="mb-1 alert alert-secondary p-1">
                   <label for="claveN" class="form-label p-2">Confirmar clave de sesión:</label>
                   <input type="text" name="claveN" class="form-control" id="claveN" value="<?=$datos->password_usuario ?>">
-
+                </div>
+                <div class="mb-1 alert alert-secondary p-1">
                   <label for="correo" class="form-label">Correo electrónico:</label>
                   <input type="text" name="correo" class="form-control" id="correo" placeholder="Ingrese su correo electrónico" value="<?=$datos->email ?>">
-
+                </div>
+                <div class="mb-1 alert alert-secondary p-1">
                   <label for="telefono" class="form-label">Teléfono:</label>
                   <input type="text" name="telefono" class="form-control" id="telefono" placeholder="Ingrese su teléfono" value="<?=$datos->telefono ?>">
-
+                </div>
+                <div class="mb-1   alert alert-secondary p-1">
                   <label for="rol" class="form-label">Tipo de rol:</label>
                   <select name="rol" class="form-select" aria-label="Seleccione">
                     <?php
@@ -128,6 +199,7 @@ include 'CRUDS/crudUsuarios.php';
                       <option <?= $datos->id_roles == $datos2->id_roles ? "selected" : "" ?> value="<?=$datos2->id_roles ?>"><?= $datos2->nombre_rol ?></option>
                     <?php } ?>
                   </select>
+                </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button name="editar" value="ok" type="submit" class="btn btn-success">Guardar Cambios</button>
@@ -145,27 +217,33 @@ include 'CRUDS/crudUsuarios.php';
                       </div>
       
                       <!-- Formulario Nuevo Usuario -->
-                      <div class="col-lg-4">
-                          <div class="alert alert-dark text-center p-2">
+                      <div class="col-lg-5">
+                          <div class="alert alert-dark text-center p-1">
                               <h6>Nuevo Usuario</h6>
                           </div>
                           <form method="GET" action="">
-                              <div class="mb-3 alert alert-secondary p-2">
+                              <div class="mb-2 p-1">
+                                <div class="mb-2 alert alert-secondary p-1">
                                   <label for="nombreUsuario" class="form-label" style="font-size: 0.9rem;">Nombre:</label>
                                   <input type="text" name="nombreUsuario" class="form-control form-control-sm" id="nombreUsuario" placeholder="Usuario">
-      
+                                </div>
+                                <div class="mb-2 alert alert-secondary p-1">
                                   <label for="clave" class="form-label mt-2" style="font-size: 0.9rem;">Contraseña:</label>
                                   <input type="password" name="clave" class="form-control form-control-sm" id="clave" placeholder="Clave">
-      
+                                </div>
+                                <div class="mb-2 alert alert-secondary p-1">
                                   <label for="claveN" class="form-label mt-2" style="font-size: 0.9rem;">Confirmar:</label>
                                   <input type="password" name="claveN" class="form-control form-control-sm" id="claveN" placeholder="Confirmar clave">
-      
+                                </div>
+                                <div class="mb-2 alert alert-secondary p-1">
                                   <label for="correo" class="form-label mt-2" style="font-size: 0.9rem;">Correo:</label>
                                   <input type="email" name="correo" class="form-control form-control-sm" id="correo" placeholder="Correo">
-      
+                                </div>
+                                <div class="mb-2 alert alert-secondary p-1">
                                   <label for="telefono" class="form-label mt-2" style="font-size: 0.9rem;">Teléfono:</label>
                                   <input type="text" name="telefono" class="form-control form-control-sm" id="telefono" placeholder="Teléfono">
-      
+                                </div>
+                                <div class="mb-2 alert alert-secondary p-1">
                                   <label for="rol" class="form-label mt-2" style="font-size: 0.9rem;">Rol:</label>
                                   <select name="rol" class="form-select form-select-sm" aria-label="Seleccione">
                                     <?php
@@ -174,10 +252,11 @@ include 'CRUDS/crudUsuarios.php';
                                         <option value="<?php echo $datos2->id_roles;?>"><?php echo $datos2->nombre_rol; ?></option>
                                     <?php } ?>
                                   </select>
+                                </div>
       
-                                  <div class="text-center">
-                                      <button type="submit" class="btn btn-primary btn-sm mt-3" name="btnregistrar" value="ok">REGISTRAR</button>
-                                  </div>
+                                <div class="text-center"> 
+                                  <button type="submit" class="btn btn-primary btn-sm mt-1 w-100" name="btnregistrar" value="ok">REGISTRAR</button>
+                                </div>
                               </div>
                           </form>
                       </div>
